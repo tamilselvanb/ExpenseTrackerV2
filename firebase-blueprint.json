@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User profile records",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of account creation"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "users/{userId}/expenses": {
+      "title": "Expense Item",
+      "description": "Expense transaction records for a user",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Transaction ID"
+        },
+        "date": {
+          "type": "string",
+          "description": "Transaction date YYYY-MM-DD"
+        },
+        "item": {
+          "type": "string",
+          "description": "Expense item name"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category name"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Amount in currency"
+        },
+        "comments": {
+          "type": "string",
+          "description": "Optional notes or comments"
+        }
+      },
+      "required": [
+        "id",
+        "date",
+        "item",
+        "category",
+        "amount"
+      ]
+    }
+  }
+}
